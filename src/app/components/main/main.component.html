@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div appAddBorder class="content" role="main">
   <h2
     *ngIf="showDefault; else showCat"
@@ -10,11 +11,11 @@
       textTransform: 'uppercase'
     }"
   >
-    {{ content }}
+    {{ content }} {{animalType}} !
   </h2>
 
   <ng-template #showCat>
-    <h2 [ngClass]="{ active: true }">Click the cat to hide it!</h2>
+    <h2 [ngClass]="{ active: true }">Click the {{animalType}} to hide it!</h2>
 
     <img
       (click)="swapDisplay()"
@@ -24,8 +25,8 @@
     />
   </ng-template>
 
-  <div (mouseover)="showElement = true">
-    Hover over me to see more cat pics.
+  <div (mouseover)="showElement = true ">
+    Hover over me to see more {{animalType}} pics.
     <div
       *ngIf="showElement"
       [ngStyle]="{
