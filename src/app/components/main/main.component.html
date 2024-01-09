@@ -4,15 +4,22 @@
     [style.color]="fontColor"
     (click)="swapDisplay()"
     (mouseover)="pointer($event.target)"
+    [ngStyle]="{
+      fontWeight: 'bold',
+      fontSize: '32px',
+      textTransform: 'uppercase'
+    }"
+    
   >
     {{ content }}
   </h2>
 
   <ng-template #showCat>
-    <h2 (click)="swapDisplay()">
-      Conditional rendering! Click again to swap back.
-    </h2>
+    <h2 [ngClass]="{'active': true}">Click the cat to hide it!</h2>
+    
     <img
+      (click)="swapDisplay()"
+      (mouseover)="pointer($event.target)"
       src="https://images.ctfassets.net/ub3bwfd53mwy/5WFv6lEUb1e6kWeP06CLXr/acd328417f24786af98b1750d90813de/4_Image.jpg?w=750"
       alt="cat-pic"
     />
