@@ -9,14 +9,13 @@
       fontSize: '32px',
       textTransform: 'uppercase'
     }"
-    
   >
     {{ content }}
   </h2>
 
   <ng-template #showCat>
-    <h2 [ngClass]="{'active': true}">Click the cat to hide it!</h2>
-    
+    <h2 [ngClass]="{ active: true }">Click the cat to hide it!</h2>
+
     <img
       (click)="swapDisplay()"
       (mouseover)="pointer($event.target)"
@@ -31,7 +30,29 @@
   </ng-template>
 
   <div (mouseover)="showElement = true" (mouseleave)="showElement = false">
-    Hover over me
-    <div *ngIf="showElement">Hello World</div>
+    Hover over me to see more cat pics.
+    <div
+      *ngIf="showElement"
+      [ngStyle]="{
+        display: 'flex',
+        flexDirection: 'row',
+      }"
+    >
+      <div
+        *ngFor="let cat of cats"
+      >
+        <img
+          [ngStyle]="{
+            width: '500px',
+            height: '500px',
+            objectFit: 'cover',
+            display: 'flex',
+            flexDirection: 'row'
+          }"
+          src="{{ cat }}"
+          alt=""
+        />
+      </div>
+    </div>
   </div>
 </div>
