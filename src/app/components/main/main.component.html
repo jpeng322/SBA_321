@@ -1,4 +1,4 @@
-<div class="content" role="main">
+<div appAddBorder class="content" role="main">
   <h2
     *ngIf="showDefault; else showCat"
     [style.color]="fontColor"
@@ -22,14 +22,9 @@
       src="https://images.ctfassets.net/ub3bwfd53mwy/5WFv6lEUb1e6kWeP06CLXr/acd328417f24786af98b1750d90813de/4_Image.jpg?w=750"
       alt="cat-pic"
     />
-    <ul>
-      <li *ngFor="let item of items; index as i; first as isFirst">
-        {{ i + 1 }} of {{ items.length }}: {{ item }}
-      </li>
-    </ul>
   </ng-template>
 
-  <div (mouseover)="showElement = true" (mouseleave)="showElement = false">
+  <div (mouseover)="showElement = true">
     Hover over me to see more cat pics.
     <div
       *ngIf="showElement"
@@ -38,9 +33,7 @@
         flexDirection: 'row',
       }"
     >
-      <div
-        *ngFor="let cat of cats"
-      >
+      <div *ngFor="let cat of cats">
         <img
           [ngStyle]="{
             width: '500px',

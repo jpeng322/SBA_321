@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { MainComponent } from './components/main/main.component';
+import { AddBorderDirective } from './shared/directives/add-border.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ButtonComponent,
-    MainComponent
+    MainComponent,
+    AddBorderDirective
   ],
   imports: [
     BrowserModule,
