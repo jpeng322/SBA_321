@@ -1,4 +1,10 @@
-# SBA321
+
+
+# SBA_321 Simple Angular Application
+
+This skill based assessment tested my foundational knowledge of Angular. I was able to implement data binding, structural and attribute directives, and angular routing to create a simple bare-bone application. The user is able to see cats and route to pages of different text.
+
+## How to run Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
 
@@ -25,4 +31,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# SBA_321
+
