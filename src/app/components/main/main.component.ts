@@ -16,5 +16,10 @@ export class MainComponent {
     this.showDefault = !this.showDefault;
   }
 
+  pointer(hoverName: any) {
+    hoverName.style.cursor = 'pointer';
+  }
+
+
   showElement: boolean = false;
 }
